@@ -1,117 +1,125 @@
-# Movie Recommendation System
 
-A sophisticated movie recommendation engine built with React and TypeScript, leveraging matrix factorization techniques and cosine similarity algorithms to provide personalized movie suggestions.
+# 🎬 Movie Recommendation System
 
-## 🎬 Overview
+A content-based movie recommendation platform built using **Django** and **Scikit-learn**, leveraging **cosine similarity** to suggest similar movies based on user input. The system fetches dynamic movie metadata from the **TMDB API** and presents it via a clean Bootstrap UI.
 
-This application uses advanced machine learning techniques to recommend movies based on user preferences and viewing history. The recommendation system employs collaborative filtering through matrix factorization and cosine vector similarity to identify patterns in user behavior and movie characteristics.
+---
 
-## ✨ Features
+## 🚀 Live Demo
 
-- **Personalized Recommendations**: Get movie suggestions tailored to your taste
-- **Collaborative Filtering**: Recommendations based on similar users' preferences
-- **Content-Based Filtering**: Suggestions based on movie attributes (genre, director, cast)
-- **Real-time Updates**: Dynamic recommendations that adapt to new ratings
-- **Advanced Search**: Find movies by title, genre, director, or actor
-- **User Ratings**: Rate movies and improve recommendation accuracy
-- **Movie Details**: Comprehensive information about movies including cast, plot, and ratings
-- **Responsive Design**: Optimized for desktop and mobile devices
+🌐 [Project Demo Link](#) *(Replace with your deployed URL)*
 
-## 🔬 Technical Approach
+---
 
-### Matrix Factorization
-The system uses **Singular Value Decomposition (SVD)** and **Non-negative Matrix Factorization (NMF)** to decompose the user-item interaction matrix into lower-dimensional representations:
+## 🛠️ Tech Stack
 
-```
-R ≈ U × Σ × V^T
-```
+- **Backend**: Django, Python, Scikit-learn
+- **Frontend**: Bootstrap, HTML5, CSS3
+- **Deployment**: PythonAnywhere / Railway / Heroku *(based on what you used)*
+- **API Integration**: TMDB (The Movie Database API)
 
-Where:
-- `R` is the user-movie ratings matrix
-- `U` represents user factors
-- `V` represents movie factors
-- `Σ` contains singular values
+---
 
-### Cosine Similarity
-To find similar users and movies, we calculate cosine similarity between vectors:
+## 🎯 Key Features
 
-```
-similarity(A, B) = (A · B) / (||A|| × ||B||)
-```
+- 🔍 **Content-Based Filtering** using cosine similarity on movie metadata
+- 🎞️ **Dynamic movie data** including posters, overviews, and ratings fetched from TMDB API
+- 🧠 Lightweight **ML model** (TF-IDF / CountVectorizer + cosine similarity)
+- ⚡ **Fast and responsive UI** powered by Bootstrap
+- 🛡️ **Secure backend** with environment-managed secrets for API access
 
-This measures the cosine of the angle between two vectors, providing a value between -1 and 1.
+---
 
-### Hybrid Approach
-The system combines multiple recommendation strategies:
-1. **Collaborative Filtering**: User-based and item-based recommendations
-2. **Content-Based Filtering**: Movie metadata analysis
-3. **Matrix Factorization**: Latent factor models
-4. **Deep Learning**: Neural collaborative filtering (planned)
+## ⚙️ How It Works
 
-## 🚀 Getting Started
+1. **Preprocessing**: Movie metadata (genres, keywords, etc.) is vectorized using CountVectorizer.
+2. **Similarity Matrix**: Cosine similarity is computed on these vectors.
+3. **User Input**: A movie title is selected by the user.
+4. **Recommendation Engine**: System returns top-N similar movies using precomputed similarity scores.
+5. **API Fetching**: TMDB API is used to display posters and movie details dynamically.
 
-### Prerequisites
+---
 
-- Node.js (v18 or higher)
-- npm or yarn package manager
+## 💻 Setup Instructions
 
-### Installation
-
-1. **Clone the repository**
+### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd movie-recommendation-system
+git clone https://github.com/your-username/movie-recommendation-django.git
+cd movie-recommendation-django
 ```
 
-2. **Install dependencies**
+### 2. Create Virtual Environment
 ```bash
-npm install
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. **Start the development server**
+### 3. Install Dependencies
 ```bash
-npm run dev
+pip install -r requirements.txt
 ```
 
-4. **Open your browser**
-Navigate to `http://localhost:8080`
+### 4. Add Your TMDB API Key
+Create a `.env` file and add:
+```env
+TMDB_API_KEY=your_tmdb_api_key_here
+```
 
-## 🛠 Technologies Used
+### 5. Run the Server
+```bash
+python manage.py migrate
+python manage.py runserver
+```
 
-### Frontend
-- **React 18** - Modern UI library
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **shadcn/ui** - Beautiful and accessible components
-- **React Query** - Data fetching and caching
-- **React Router** - Client-side routing
+---
 
-### Backend & Data Processing
-- **Matrix Operations** - Linear algebra computations
-- **Cosine Similarity** - Vector similarity calculations
-- **SVD/NMF** - Matrix factorization algorithms
-- **Real-time Updates** - Dynamic recommendation updates
+## 🌐 Deployment (Handled by Me)
 
-### Development Tools
-- **Vite** - Fast build tool
-- **ESLint** - Code linting
-- **TypeScript** - Static type checking
+- 🐍 Deployed the backend on [PythonAnywhere / Heroku / Railway] using a production-ready Django setup.
+- ⚙️ Configured environment variables, static files, and WSGI entry points.
+- 🔗 Integrated the TMDB API securely with key rotation in deployment settings.
+- 🛠️ Used version control and Git for deployment pipeline (local ➝ remote).
 
-## 📊 Algorithm Details
+---
 
-### User-Based Collaborative Filtering
-1. Calculate similarity between users using cosine similarity
-2. Find k-nearest neighbors for the target user
-3. Predict ratings based on weighted average of neighbors' ratings
+## 👤 Team Roles
 
-### Item-Based Collaborative Filtering
-1. Compute similarity matrix between all movie pairs
-2. For each user, recommend movies similar to their highly-rated ones
-3. Use cosine similarity on movie feature vectors
+| Name               | Role                           |
+|--------------------|--------------------------------|
+| Your Name (You)    | 🔧 Backend Developer & Deployer |
+| Teammate A         | 🎨 UI Design & Frontend Logic   |
+| Teammate B         | 🤖 ML Logic & Data Engineering  |
 
-### Matrix Factorization Process
-1. **Data Preprocessing**: Handle missing values and normalize ratings
-2. **Decomposition**: Apply SVD to the user-movie matrix
-3. **Dimensionality Reduction**: Keep top k singular values
-4. **Reconstruction**: Generate predictions from reduced matrices
-5. **Optimization**: Use gradient descent to minimize RMSE
+---
+
+## 📸 Screenshots
+
+> *(Insert screenshots of the homepage, search results, and recommendation output)*
+
+---
+
+## 🧠 Learnings & Takeaways
+
+- Worked with **content-based filtering** using **cosine similarity**
+- Integrated **external APIs (TMDB)** and handled dynamic data rendering
+- Learned **secure backend deployment** and environment configuration for production
+- Gained experience in **team-based development**, working across frontend, backend, and ML layers
+
+---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 📬 Contact
+
+Feel free to reach out if you'd like to collaborate or ask questions!
+
+- 📧 Email: your.email@example.com
+- 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourusername)
+- 🔗 Portfolio: [yourportfolio.com](https://yourportfolio.com)
+
+---
+
