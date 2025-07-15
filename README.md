@@ -7,7 +7,7 @@ A content-based movie recommendation platform built using **Django** and **Sciki
 
 ## 🚀 Live Demo
 
-🌐 [Project Demo Link](#) *(Replace with your deployed URL)*
+🌐 [Project Demo Link](#) 
 
 ---
 
@@ -86,15 +86,15 @@ python manage.py runserver
 
 | Name               | Role                           |
 |--------------------|--------------------------------|
-| Your Name (You)    | 🔧 Backend Developer & Deployer |
-| Teammate A         | 🎨 UI Design & Frontend Logic   |
-| Teammate B         | 🤖 ML Logic & Data Engineering  |
+| Md Saad (You)    | 🔧 Backend Developer & Deployer |
+| Abuusama      | 🎨 ML Logic & Frontend Logic |
+| Shruti         | 🤖 UI Design & Data Engineering  |
 
 ---
 
 ## 📸 Screenshots
 
-> *(Insert screenshots of the homepage, search results, and recommendation output)*
+> wil be available soon
 
 ---
 
@@ -107,19 +107,13 @@ python manage.py runserver
 
 ---
 
-## 📜 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
 
 ## 📬 Contact
 
 Feel free to reach out if you'd like to collaborate or ask questions!
 
-- 📧 Email: your.email@example.com
-- 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourusername)
-- 🔗 Portfolio: [yourportfolio.com](https://yourportfolio.com)
+- 📧 Email: saadiqbal1921@gmail.com
+- 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/saad99)
 
 ---
 
